@@ -1,0 +1,264 @@
+:root {
+  /* Primary */
+  /* Text */
+  --very_dark_desaturated_blue: hsl(238, 29%, 16%);
+  --softred: hsl(14, 88%, 65%);
+  /* Neutral */
+  /* Text */
+  --verydark_grayish_blue: hsl(237, 12%, 33%);
+  --darkgrayish_blue: hsl(240, 6%, 50%);
+  /* Dividers */
+  --lightgrayish_blue: hsl(240, 5%, 91%);
+}
+/* reset starts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* reset ends */
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  /*body background property starts here */
+  background: #ad68e9; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #ad68e9 29%,
+    #6563e8 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #ad68e9 29%,
+    #6563e8 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #ad68e9 29%,
+    #6563e8 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6f2aa8', endColorstr='#2c2ca5',GradientType=0 ); /* IE6-9 */
+
+  /* body background property ends here */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.main {
+  background: url(./images/bg-pattern-desktop.svg);
+  background-color: white;
+  background-position: left -540px bottom -120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 57.8125rem;
+  min-height: 31.9375rem;
+  border-radius: 1.5rem;
+  display: flex;
+  box-shadow: 0.3125rem 2.5rem 1.875rem -0.9375rem #5742b9;
+}
+.img-part {
+  width: 50%;
+  height: 31.9375rem;
+}
+.hidetheoverflow {
+  overflow: hidden;
+  height: 25rem;
+  height: 31.9375rem;
+}
+
+.thebox {
+  position: relative;
+  right: 6.75rem;
+  top: -19.0625rem;
+  z-index: 2;
+}
+.thewoman {
+  position: relative;
+  right: 5.9375rem;
+  top: 4.375rem;
+  z-index: 1;
+}
+.text-part {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 1.75rem;
+}
+.text-part h1 {
+  margin-top: 4.375rem;
+  margin-bottom: 1.5rem;
+}
+/* Text part starts from here */
+img {
+  padding-left: 15px;
+}
+.text-part h1 {
+  color: var(--very_dark_desaturated_blue);
+}
+.text-part h2 {
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 1rem;
+  color: var(--verydark_grayish_blue);
+}
+.labeltext {
+  max-height: max-content;
+  float: left;
+  width: 19.75rem;
+  font-size: 13.5px;
+  color: var(--verydark_grayish_blue);
+}
+
+.text-part .labeltext:hover {
+  color: var(--softred);
+}
+
+div {
+  position: relative;
+}
+input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+label {
+  cursor: pointer;
+  position: relative;
+  display: block;
+}
+label::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.seperator {
+  display: inline-block;
+  background-color: var(--lightgrayish_blue);
+
+  width: 21.875rem;
+  height: 1px;
+}
+
+p {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+  font-size: 13px;
+  width: 21.875rem;
+  color: var(--darkgrayish_blue);
+}
+input[type="checkbox"]:checked ~ h2 {
+  color: var(--verydark_desaturated_blue);
+  font-weight: 700;
+}
+input[type="checkbox"]:checked ~ h2 ~ p {
+  max-height: 80px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: 0.6s ease-out;
+}
+
+input[type="checkbox"]:checked ~ h2 img {
+  transform: scaleY(-1);
+  transition: 0.6s ease-out;
+}
+.attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+  color: aliceblue;
+}
+.attribution a {
+  color: #939cfa;
+}
+.attribution a:hover {
+  color: rgb(244, 160, 160);
+}
+
+@media screen and (max-width: 960px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(./images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center top 19px;
+    width: 20.4375rem;
+    min-height: 33.5625rem;
+    border-radius: 22px;
+  }
+  .hidetheoverflow {
+    width: 20.4375rem;
+  }
+
+  .img-part {
+    height: 120px;
+    top: -153px;
+    right: 36px;
+  }
+  .thebox {
+    position: relative;
+    width: 90px;
+    padding: 0;
+    left: 3px;
+    top: -376px;
+  }
+  .thewoman {
+    position: absolute;
+    width: 240px;
+  }
+  .text-part {
+    margin-left: 0;
+    width: 18.3125rem;
+  }
+  .text-part h1 {
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+  p {
+    width: 17.5rem;
+    font-size: 13px;
+  }
+  .labeltext {
+    max-height: max-content;
+    float: left;
+    width: 17.8125rem;
+    font-size: 13px;
+    color: var(--verydark_grayish_blue);
+    margin-bottom: 0.5rem;
+  }
+  .seperator {
+    width: 17.5rem;
+    background-color: var(--lightgrayish_blue);
+  }
+  .text-part img {
+    display: inline;
+  }
+  .thearrow {
+    float: right;
+    margin-top: -12px;
+    padding-inline: 12px;
+  }
+  input[type="checkbox"]:checked ~ h2 ~ p {
+    line-height: 1.15rem;
+  }
+}
